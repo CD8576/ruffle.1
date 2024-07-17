@@ -1,5 +1,12 @@
 <DOCTYPE HTML>
- <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
-        <embed height="400" pluginspage=" https://unpkg.com/@ruffle-rs/ruffle" src="https://github.com/CD8576/ruffle.1/blob/main/FPAWorld1_07a%5B1%5D.swf" type="application/x-shockwave-flash" width="650" ></embed>
-</div>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("movie.swf");
+    });
+</script>
+<script src="path/to/ruffle/ruffle.js"></script>
